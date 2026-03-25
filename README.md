@@ -14,7 +14,7 @@ ISP-Resilient Architecture: Includes a custom-built Cloudflare Worker proxy to h
 <h2>🛠️ Tech Stack</h2>
 <b>Language:</b> Python 3.11
 
-<b>Machine Learning:<b> Scikit-learn (CountVectorizer, Cosine Similarity), NLTK (PorterStemmer)
+<b>Machine Learning:</b> Scikit-learn (CountVectorizer, Cosine Similarity), NLTK (PorterStemmer)
 
 <b>Frontend:</b> Streamlit
 
@@ -52,6 +52,8 @@ To solve the ERR_CONNECTION_TIMED_OUT error common with TMDB in certain regions,
   
           pip install -r requirements.txt
   4. Download the TMDB 5000 Movie Dataset <a>https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata </a> from Kaggle and place tmdb_5000_movies.csv and tmdb_5000_credits.csv in the root folder.
+
+
   <b>5. Run the App:</b>
 
           streamlit run app.py
