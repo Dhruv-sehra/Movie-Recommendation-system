@@ -14,6 +14,7 @@ ISP-Resilient Architecture: Includes a custom-built Cloudflare Worker proxy to h
 <h2>🛠️ Tech Stack</h2>
 <b>Language:</b> Python 3.11
 
+
 <b>Machine Learning:</b> Scikit-learn (CountVectorizer, Cosine Similarity), NLTK (PorterStemmer)
 
 <b>Frontend:</b> Streamlit
@@ -23,17 +24,17 @@ ISP-Resilient Architecture: Includes a custom-built Cloudflare Worker proxy to h
 <b>DevOps/Networking:</b> Cloudflare Workers (JavaScript Proxy), Dotenv
 
 <h2>🧠 How It Works</h2>
-<b>1. Data Preprocessing</b>
+<b>1. Data Preprocessing:</b>
 The model processes the TMDB 5000 Movie Dataset. We extract key features like genres, keywords, cast (top 3), and crew (Director).
 
 Stemming: Words like "loving," "loved," and "love" are converted to the root word "love" using PorterStemmer to ensure better matching.
 
 Vectorization: We convert the combined "tags" for each movie into a 5,000-word vector using CountVectorizer.
 
-<b>2. The Recommendation Logic</b>
+<b>2. The Recommendation Logic:</b>
 When a user selects a movie, the system calculates the Cosine Similarity between that movie's vector and every other movie in the database. It then returns the top 5 most similar titles.
 
-<b>3. Custom API Gateway</b>
+<b>3. Custom API Gateway:</b>
 To solve the ERR_CONNECTION_TIMED_OUT error common with TMDB in certain regions, I deployed a middleman proxy using Cloudflare Workers. This ensures the Python script always has a stable connection to the metadata server.
 
 
@@ -51,7 +52,9 @@ To solve the ERR_CONNECTION_TIMED_OUT error common with TMDB in certain regions,
   <b>3. Install Dependencies:</b>
   
           pip install -r requirements.txt
-  4. Download the TMDB 5000 Movie Dataset <a>https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata </a> from Kaggle and place tmdb_5000_movies.csv and tmdb_5000_credits.csv in the root folder.
+<b>4. Download Data</b>
+
+Download the TMDB 5000 Movie Dataset <a>https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata </a> from Kaggle and place tmdb_5000_movies.csv and tmdb_5000_credits.csv in the root folder.
 
 
   <b>5. Run the App:</b>
